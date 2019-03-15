@@ -78,7 +78,11 @@ li a:hover {
     background-color: white;
     border-radius: 12px;
     padding: 10px;
-    margin : 10px;
+    margin: 10px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
 }
 
 .card:hover {
@@ -93,12 +97,20 @@ li a:hover {
     border-radius: 5px;
     font-size: 15px;
     font-weight: 600;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 #voter {
     border-radius: 5px;
     font-size: 15px;
     font-weight: 600;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .Modal {
@@ -114,11 +126,19 @@ li a:hover {
     color: black;
     text-size-adjust: auto;
     background: purple;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
 }
 
 #upload{
     border-radius: 16px;
     font-size: 22px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
 }
 
 #adddiv{
@@ -128,9 +148,21 @@ li a:hover {
 #addon{
     border-radius: 16px;
     font-size: 22px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
 }
 
 #submit{
     border-radius: 9px;
     font-size: 22px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+}
+
+h4{
+    text-align: center;
 }

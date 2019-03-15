@@ -199,7 +199,8 @@
          snapshot.docChanges().forEach(function (change) {
            if (change.type === "added") {
              var docdata = change.doc.data();
-             var card = generateCard(change.doc.id,docdata.title, docdata.description, docdata.date, docdata.department, docdata.address, docdata.status, docdata.imageurl, docdata.votes);
+            //  console.log(new Date(docdata.date.seconds*1000));
+             var card = generateCard(change.doc.id,docdata.title, docdata.description, new Date(docdata.date.seconds*1000), docdata.department, docdata.address, docdata.status, docdata.imageurl, docdata.votes);
              var div = document.createElement("div");
              div.className = "complaintlist";
              div.innerHTML = card;

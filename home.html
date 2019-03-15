@@ -82,7 +82,7 @@
                 <button id="mdlclsbtn" style="border-radius: 16px;font-size: 22px"><i class="fas fa-times-circle"></i></button>
             </div>
             <div class="modal-content padding">
-                <h4 class="padding fonting">TITLE</h4>
+                <h3 class="padding fonting">TITLE</h3>
                 <p class="padding fonting">Complaint message</p>
                 <h5 class="padding fonting">OFFICER :</h5>
                 <button id="upload"><i class="fas fa-camera"></i></button>
@@ -145,15 +145,13 @@
     <div class="card animated">
             <div class="container" data-docid={data}>
                 <h4><b>Title : {data}</b></h4>
-                <p>Description : {data}</p>
-                <p>Date :{data}</p>
-                <h5 class="classify">Department:{data}</h5>
-                <h5>Address :{data}</h5>
-                <h4>status : {data}</h4>
-                <img src="{data}" alt="">
-                <button id="voter">
-                    Up Vote
-                </button>
+                <p><b>Description :</b> {data}</p>
+                <p><b>Date :</b>{data}</p>
+                <h5 class="classify"><b>Department:</b>{data}</h5>
+                <h5><b>Address :</b>{data}</h5>
+                <h4><b>status :</b> {data}</h4>
+                <img id="probpic" src="{data}" alt="">
+                <button id="voter">Up Vote</button>
                 <h5 id="cnt">votes :{data}</h5>        
                 </li>
 
