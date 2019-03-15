@@ -18,11 +18,35 @@
             Sign in using Google <i class="fab fa-google-plus" style="color:aliceblue"></i>
         </button>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDKOEhSOZA9ULAfqKHbx8rgk10JCpsDVRM",
+    authDomain: "registry-2ee05.firebaseapp.com",
+    databaseURL: "https://registry-2ee05.firebaseio.com",
+    projectId: "registry-2ee05",
+    storageBucket: "registry-2ee05.appspot.com",
+    messagingSenderId: "696350703036"
+  };
+  firebase.initializeApp(config);
+</script>
+
     <script>
+        var auth=firebase.auth();
+
+        auth.onAuthStateChanged((authdata)=>{
+            if(authdata){
+                window.open("home.html","_self");
+            }else{
+                console.log("Signed out");
+            }
+        });
         var logbtn = document.getElementById("gbtn");
         logbtn.addEventListener('click', () => {
-            window.close("./login.html");
-            window.open("./home.html");
+           var provider= new firebase.auth.GoogleAuthProvider();
+           firebase.auth().signInWithPopup(provider).catch(console.err);
         });
     </script>
 </body>
