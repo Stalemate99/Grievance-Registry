@@ -53,17 +53,7 @@
             <input class="intag" type="text" placeholder="  Search">
             <button id="search"><i class="fas fa-search"></i></button>
         </div>
-        <div class="card animated">
-            <div class="container">
-                <h4><b>Title</b></h4>
-                <p>Complaint Message</p>
-                <h5>DISTRICT : </h5>
-                <h5>LOCATION :</h5>
-                <h5>DATE :</h5>
-                <h5 id="cnt"></h5>
-                <button id="expand">Expand</button>
-            </div>
-        </div>
+
     </div>
     <a id="exmdl" style="display:none">
         <div class="Modal animated">
@@ -80,7 +70,36 @@
             </div>
         </div>
     </a>
-    <script src="home.js"></script>
+    <script type="text/template" id="cardtemplate">
+        <div class="card animated">
+            <div class="container">
+                <h4><b>{{title}}</b></h4>
+                <p>{{complaintmessage}}</p>
+                <h5>{{district}}</h5>
+                <h5>{{location}}</h5>
+                <h5>{{date}}</h5>
+                <h5 id="cnt">{{count}}</h5>
+                <button id="expand">Expand</button>
+            </div>
+        </div>
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBI8q9uhn06sK0xoowoVAmszqqlvnQRmeY",
+            authDomain: "abacus-4a358.firebaseapp.com",
+            databaseURL: "https://abacus-4a358.firebaseio.com",
+            projectId: "abacus-4a358",
+            storageBucket: "abacus-4a358.appspot.com",
+            messagingSenderId: "1083880429367"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script src="office.js"></script>
 </body>
 
 </html>

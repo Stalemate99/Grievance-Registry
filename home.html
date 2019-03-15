@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./animatedModal.js-master/demo/css/normalize.min.css">
+    <link rel="stylesheet" href="./animatedModal.js-master/demo/css/animate.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css"> -->
     <!-- <link rel="stylesheet" href=""> -->
 </head>
@@ -67,10 +70,15 @@
                 <button id="viewmore1">
                     View More
                 </button>
+                </li>
+
             </div>
         </div>
         <div id="adddiv">
-            <button id="addon"><i class="fas fa-plus-circle"></i></button>
+            <a id="demo01" href="#animatedModal">
+
+                <button id="addon"><i class="fas fa-plus-circle"></i></button>
+            </a>
         </div>
     </div>
     <a id="viewmore" style="display:none">
@@ -92,14 +100,57 @@
                 <button id="addmdlclsbtn" style="border-radius: 16px;font-size: 22px"><i class="fas fa-times-circle"></i></button>
             </div>
             <div class="modal-content padding">
-                    <input class="padding fonting intag" type="text" placeholder="                TITLE">
+                <input class="padding fonting intag" type="text" placeholder="                TITLE">
                 <textarea rows="10" cols="60" class="padding fonting inarea">Write complaint here</textarea>
-                <button id="upload"><i class="fas fa-camera"></i></button>
+                <input type="file" value="upload" id="upload" class="fileupload" />
                 <button id="submit">SUBMIT</button>
             </div>
         </div>
     </a>
+
+
+    <!--DEMO01-->
+    <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+        <div id="btn-close-modal" class="close-animatedModal">
+            <button id="addmdlclsbtn" style="border-radius: 16px;font-size: 22px"><i class="fas fa-times-circle"></i></button>
+        </div>
+
+        <div class="modal-content">
+            <!--Your modal content goes here-->
+            <input class="padding fonting intag" type="text" placeholder="                TITLE">
+            <textarea rows="10" cols="60" class="padding fonting inarea" placeholder="Write complaint here"></textarea>
+            <input type="file" value="upload" id="upload" class="fileupload" />
+            <button id="submit">SUBMIT</button>
+        </div>
+    </div>
+
+
+    <script src="./animatedModal.js-master/demo/js/jquery.min.js"></script>
+    <script src="./animatedModal.js-master/demo/js/animatedModal.js"></script>
+    <script>
+        //demo 01
+        $("#demo01").animatedModal();
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBI8q9uhn06sK0xoowoVAmszqqlvnQRmeY",
+            authDomain: "abacus-4a358.firebaseapp.com",
+            databaseURL: "https://abacus-4a358.firebaseio.com",
+            projectId: "abacus-4a358",
+            storageBucket: "abacus-4a358.appspot.com",
+            messagingSenderId: "1083880429367"
+        };
+        firebase.initializeApp(config);
+    </script>
+
     <script src="home.js"></script>
+
+
 </body>
 
 </html>

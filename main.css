@@ -116,33 +116,6 @@ li a:hover {
     background: purple;
 }
 
-.close-animatedModal
-{
-    float: right;
-    margin: 0px;
-}
-
-.modal-content{
-    text-align: center;
-    padding-top: 35px;
-    height: 90%;
-    text-overflow: initial;
-}
-
-.animated{
-    animation: anime 1s;
-}
-
-@keyframes anime
-{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity:1;
-    }
-}
-
 #upload{
     border-radius: 16px;
     font-size: 22px;
