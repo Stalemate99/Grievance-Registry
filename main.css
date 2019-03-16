@@ -163,6 +163,11 @@ li a:hover {
     -o-border-radius: 9px;
 }
 
-h4{
+.center{
     text-align: center;
 }
+
+#probpic{
+    width:35%;
+}
+

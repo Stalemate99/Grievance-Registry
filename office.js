@@ -1,30 +1,8 @@
 // console.log(exd+"Hello wordl");
 
 var main = sel("#main");
-var oatag = sel("#exmdl");
-var exclsbtn = sel("#exmdlclsbtn");
-var imgs = sel("#imgs");
-var apt = sel("#aptbtn");
 var finish = sel("#fnhbtn");
 
-
-// console.log(firebase);
-exclsbtn.addEventListener('click', () => {
-    main.removeAttribute("style", "display:none");
-    oatag.setAttribute("style", "display:none");
-});
-
-apt.addEventListener("click", () => {
-    apt.setAttribute("style", "display:none");
-    finish.removeAttribute("style", "display:none");
-    finish.setAttribute("style", "border-radius: 15px;font-size: 16px");
-});
-
-finish.addEventListener("click", () => {
-    finish.setAttribute("style", "display:none");
-    apt.removeAttribute("style", "display:none");
-    apt.setAttribute("style", "border-radius: 15px;font-size: 16px");
-});
 
 var card = sel("#cardtemplate").innerHTML;
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Greivance Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <h2>Greivance Register</h2>
+    <div class="home">
+        <button id="signbtn">Sign in</button>
+        <button id="loginbtn">Login</button>
+    </div>
+    <div class="login intag" style="display:none">
+        <input id="lemail" type="text" placeholder="Enter email">
+        <input id="lpass" type="text" placeholder="Enter password">
+        <button id="lsub">submit</button>
+    </div>
+    <div class="signin intag" style="display:none">
+        <input id="semail" type="text" placeholder="Enter email">
+        <input id="spass" type="text" placeholder="Enter password">
+        <input id="sgid" type="text" placeholder="Enter ID">
+        <input id="sdis" type="text" placeholder="Enter district">
+        <button id="ssub">submit</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDKOEhSOZA9ULAfqKHbx8rgk10JCpsDVRM",
+            authDomain: "registry-2ee05.firebaseapp.com",
+            databaseURL: "https://registry-2ee05.firebaseio.com",
+            projectId: "registry-2ee05",
+            storageBucket: "registry-2ee05.appspot.com",
+            messagingSenderId: "696350703036"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="logino.js"></script>
+</body>
+
+</html>

@@ -27,76 +27,57 @@
         </li>
     </ul>
     <ul id="categories">
-        <li>
-            <a href="">
-                ALL
-            </a>
-        </li>
-        <li>
-            <a href="">
-                SEWAGE
-            </a>
-        </li>
-        <li>
-            <a href="">
-                GARBAGE
-            </a>
-        </li>
-        <li>
-            <a href="">
-                STREET LIGHTS
-            </a>
-        </li>
-    </ul>
+            <li>
+                <button id="all">ALL</button>
+            </li>
+            <li>
+                <button id="sewage">SEWAGE</button>
+            </li>
+            <li>
+                <button id="garbage">GARBAGE</button>
+            </li>
+            <li>
+                <button id="road">ROAD MAINTANENCE</button>
+            </li>
+        </ul>
     <div id="main">
-        <div id="srchbar">
-            <input class="intag" type="text" placeholder="  Search">
-            <button id="search"><i class="fas fa-search"></i></button>
-        </div>
+            <div class="showdown">
+<slider>hey</slider>
+                </div>
 
     </div>
-    <a id="exmdl" style="display:none">
-        <div class="Modal animated">
-            <div class="close-animatedModal">
-                <button id="exmdlclsbtn" style="border-radius: 16px;font-size: 22px"><i class="fas fa-times-circle"></i></button>
-            </div>
-            <div class="modal-content padding">
-                <h4 class="padding fonting">TITLE</h4>
-                <p class="padding fonting">Complaint message</p>
-                <button id="imgs" style="border-radius: 16px;font-size: 22px"><i class="far fa-images"></i></button>
-                <button id="aptbtn" style="border-radius: 15px;font-size: 16px">ACCEPT</button>
-                <button id="fnhbtn" style="display:none;border-radius: 15px;font-size: 16px">FINISH</button>
-                <button id="upload" style="border-radius: 16px;font-size: 22px"><i class="fas fa-camera"></i></button>
-            </div>
-        </div>
-    </a>
     <script type="text/template" id="cardtemplate">
         <div class="card animated">
-            <div class="container">
-                <h4><b>{{title}}</b></h4>
-                <p>{{complaintmessage}}</p>
-                <h5>{{district}}</h5>
-                <h5>{{location}}</h5>
-                <h5>{{date}}</h5>
-                <h5 id="cnt">{{count}}</h5>
-                <button id="expand">Expand</button>
+                <div class="container" data-docid={data}>
+                    <h4 class="center"><b>Title : {data}</b></h4>
+                    <p><b>Description :</b> {data}</p>
+                    <p><b>Date :</b>{data}</p>
+                    <h4 class="classify"><b>Department:</b>{data}</h4>
+                    <h4 id="address"><b>Address :</b>{data}</h4>
+                    <h4 id="status"><b>status :</b> {data}</h4>
+                    <img id="probpic" src="{data}" alt="">
+                    <br>
+                    <button id="voter">Up Vote</button>
+                    <h4 id="cnt"><b> votes</b>:{data}</h4>        
+                    </li>
+    
+                </div>
             </div>
-        </div>
     </script>
 
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBI8q9uhn06sK0xoowoVAmszqqlvnQRmeY",
-            authDomain: "abacus-4a358.firebaseapp.com",
-            databaseURL: "https://abacus-4a358.firebaseio.com",
-            projectId: "abacus-4a358",
-            storageBucket: "abacus-4a358.appspot.com",
-            messagingSenderId: "1083880429367"
-        };
-        firebase.initializeApp(config);
-    </script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDKOEhSOZA9ULAfqKHbx8rgk10JCpsDVRM",
+                authDomain: "registry-2ee05.firebaseapp.com",
+                databaseURL: "https://registry-2ee05.firebaseio.com",
+                projectId: "registry-2ee05",
+                storageBucket: "registry-2ee05.appspot.com",
+                messagingSenderId: "696350703036"
+            };
+            firebase.initializeApp(config);
+        </script>
 
 
     <script src="office.js"></script>

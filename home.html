@@ -44,10 +44,7 @@
         </li>
     </ul>
     <div id="main">
-        <div id="srchbar">
-            <input class="intag" type="text" placeholder="  Search">
-            <button id="search"><i class="fas fa-search"></i></button>
-        </div>
+       
         <div class="showdown">
 
         </div>
@@ -144,15 +141,16 @@
 <script type="text/template" id="cardtemplate">
     <div class="card animated">
             <div class="container" data-docid={data}>
-                <h4><b>Title : {data}</b></h4>
+                <h4 class="center"><b>Title : {data}</b></h4>
                 <p><b>Description :</b> {data}</p>
                 <p><b>Date :</b>{data}</p>
-                <h5 class="classify"><b>Department:</b>{data}</h5>
-                <h5><b>Address :</b>{data}</h5>
-                <h4><b>status :</b> {data}</h4>
+                <h4 class="classify"><b>Department:</b>{data}</h4>
+                <h4 id="address"><b>Address :</b>{data}</h4>
+                <h4 id="status"><b>status :</b> {data}</h4>
                 <img id="probpic" src="{data}" alt="">
+                <br>
                 <button id="voter">Up Vote</button>
-                <h5 id="cnt">votes :{data}</h5>        
+                <h4 id="cnt"><b> votes</b>:{data}</h4>        
                 </li>
 
             </div>
